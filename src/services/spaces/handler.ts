@@ -10,17 +10,27 @@ async function handler(event: APIGatewayProxyEvent, context: Context): Promise<A
 
   let message: string
 
-  switch (event.httpMethod) {
-    case 'GET':
-      message = 'Hello from Get'
-      break;
-    case 'POST':
-      const response = postSpaces(event, ddbClient)
-      return response
-  
-    default:
-      break;
+  try {
+    switch (event.httpMethod) {
+      case 'GET':
+        message = 'Hello from Get'
+        break;
+      case 'POST':
+        const response = postSpaces(event, ddbClient)
+        return response
+    
+      default:
+        break;
+    }
+  } catch (error) {
+    console.log(error)
+    return {
+      statusCode: 500,
+      body: JSON.stringify(error.message)
+    }
   }
+
+  
 
   const response: APIGatewayProxyResult = {
     statusCode: 200,

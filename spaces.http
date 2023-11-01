@@ -4,3 +4,9 @@ GET https://zkpq5b6kx3.execute-api.eu-west-2.amazonaws.com/prod/spaces
 ###
 
 POST https://zkpq5b6kx3.execute-api.eu-west-2.amazonaws.com/prod/spaces
+Content-Type: : application/json
+
+{
+  "location" : "Paris"
+}
+###
