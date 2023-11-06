@@ -46,5 +46,6 @@ export class LambdaStack extends Stack {
     // }))
 
     this.spacesLamndaIntegration = new LambdaIntegration(spacesLambda)
+    // This is me being a badass..
   }
 }
