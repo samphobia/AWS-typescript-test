@@ -7,8 +7,8 @@ handler({
   httpMethod: 'GET',
   queryStringParameters: {
     id: 'bf931049-6d1c-4d3a-8c69-4852d2c8a50c'
-  }
+  },
   // body: JSON.stringify({
-  //   location: 'London'
+  //   location: 'London updated'
   // })
 } as any, {} as any)

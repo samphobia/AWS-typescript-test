@@ -4,6 +4,8 @@ import { S3Client, ListBucketsCommand } from "@aws-sdk/client-s3";
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { postSpaces } from "./PostSpaces";
 import { getSpaces } from "./GetSpaces";
+import { updateSpace } from "./UpdateSpace";
+import { deleteSpace } from "./DeleteSpace";
 
 const ddbClient = new DynamoDBClient({})
 
@@ -20,6 +22,14 @@ async function handler(event: APIGatewayProxyEvent, context: Context): Promise<A
       case 'POST':
         const postResponse = await postSpaces(event, ddbClient)
         return postResponse
+      case 'PUT':
+        const putResponse = await updateSpace(event, ddbClient)
+        console.log(putResponse)
+        return putResponse
+      case 'DELETE':
+        const deleteResponse = await deleteSpace(event, ddbClient)
+        console.log(deleteResponse)
+        return deleteResponse
     
       default:
         break;
