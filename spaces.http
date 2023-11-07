@@ -7,7 +7,8 @@ POST https://zkpq5b6kx3.execute-api.eu-west-2.amazonaws.com/prod/spaces
 Content-Type: : application/json
 
 {
-  "location" : "Paris"
+  "location" : "Paris",
+  "name" : "Best Location"
 }
 ###
 
@@ -18,5 +19,4 @@ PUT https://zkpq5b6kx3.execute-api.eu-west-2.amazonaws.com/prod/spaces?id=
 Content-Type: : application/json
 
 {
-  "location" : "Lagos"
-}
+  "location" : "L\
