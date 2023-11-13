@@ -1,6 +1,9 @@
+@url = https://zkpq5b6kx3.execute-api.eu-west-2.amazonaws.com/prod/
+@token = eyJraWQiOiJ2bVlpTlwvKzU3UGxRYUxqRHNsU1NjQ1pwR1U1QWZUYzBCbEdsMm9WcExiQT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyM2IyMDY3Ny0zOGQ4LTRhMjktODAxYi04YmJiYzg4MGZmZWQiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmV1LXdlc3QtMi5hbWF6b25hd3MuY29tXC9ldS13ZXN0LTJfajRIWm14bnRoIiwiY29nbml0bzp1c2VybmFtZSI6ImxhdGVibGFja2hvbGUiLCJvcmlnaW5fanRpIjoiNmQyOWI1YTMtMDgyNS00ZDRiLTgwNWMtMTU4ZTk0YTM2ODYxIiwiYXVkIjoiN2RudDNzZTUzc2ttNmpqdXRuYmU1ZjI1YXUiLCJldmVudF9pZCI6IjIzMTQ3MDZiLTYyMzItNDE1Ni05NzZjLTUzNDA0OGQ2OTUxZCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjk5ODgzMTE3LCJleHAiOjE2OTk4ODY3MTcsImlhdCI6MTY5OTg4MzExNywianRpIjoiN2NkMjRmYzgtMDQ1My00OGQzLWE0YzktODNiMzk0YTlmNDhkIiwiZW1haWwiOiJzYW11ZWxAZGVudWthbi5jb20ifQ.Kd5faqqPwn6sKpmTzIS5rX0SIbEDR1rWNFp9KsSeoTfBKCMiyNZ0zkPiksf4QiW1gX7traCilbE1eOY1qMHYh8AIO1Ntqc-4mNExEAP6Cv97aC7lVFTPdIKebVIIoh_Oq0FTHRe-TBMxq4VvUvSr2I_0CFeDSb3t5jMqEj_nJTcy71pderrdwN9X1uGbmkx8b_dwQ7V-OPNyBkmk4C9txcVnNbAHXHiSO2qyeMRXfMyefGdoWabeKInndBxtf-RHA8R_pldIXlnLupTT2I0pbf5kdbBPo0fTJBEFy_7iMFdpseann_p_WKjxIo-o5o1rgUeE2K9H_mTvVZzboIP98Q
 
 
-GET https://zkpq5b6kx3.execute-api.eu-west-2.amazonaws.com/prod/spaces
+GET {{url}}/spaces
+Authorization: {{token}}
 ###
 
 POST https://zkpq5b6kx3.execute-api.eu-west-2.amazonaws.com/prod/spaces
@@ -12,7 +15,8 @@ Content-Type: : application/json
 }
 ###
 
-DELETE https://1ertg407z7.execute-api.eu-west-1.amazonaws.com/prod/spaces?id=343345
+DELETE {{url}}/spaces
+Authorization: {{token}}
 ###
 
 PUT https://zkpq5b6kx3.execute-api.eu-west-2.amazonaws.com/prod/spaces?id=
